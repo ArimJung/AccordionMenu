@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>아코디언 메뉴</title>
+<style>
+li {
+   list-style: none;
+}
+a {
+   color: black;
+   text-decoration: none;
+}
+.menu {
+   position: absolute;
+   width: 50%;
+   height: 100%;
+   background: lightgray;
+}
+.menu1 a {
+   display: block;
+   padding: 20px;
+   border: 1px solid white;
+   background: black;
+   color: white;
+}
+
+.menu2 {
+   display: none;
+}
+
+.menu2 a:hover{
+         background-color: darkgray;
+  }
+
+.menu2 a{
+		background-color:gray;
+        color:blue;
+  }
+  
+</style>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <script>
+        $(document).ready(function() {            
+            $('.menu1').click(function() {               
+               $('.menu2').slideUp();
+               if($(this).children('.menu2').is(':hidden')){
+            	   
+            	   $(this).children('.menu2').slideDown();
+            	   }else{
+            		   $(this).children('.menu2').slideUp();
+            	   }
+            });
+        });
+     
+    </script>
+    
+	<ul>
+		<li class="menu1">
+			 <a href="#">메뉴1</a>
+			  <ul class="menu2">
+               <li><a href="#">메뉴1-1</a></li>
+               <li><a href="#">메뉴1-2</a></li>
+               <li><a href="#">메뉴1-3</a></li>
+             </ul>
+		</li>
+		<li class="menu1">
+			<a href="#">메뉴2</a>
+			  <ul class="menu2">
+                <li><a href="#">메뉴2-1</a></li>
+                <li><a href="#">메뉴2-2</a></li>
+                <li><a href="#">메뉴2-3</a></li>
+              </ul>
+		</li>
+		<li class="menu1">
+			<a href="#">메뉴3</a>
+		    	<ul class="menu2">
+                  <li><a href="#">메뉴3-1</a></li>
+                  <li><a href="#">메뉴3-2</a></li>
+                  <li><a href="#">메뉴3-3</a></li>
+               </ul>
+		</li>
+	</ul> 
+
+
+</body>
+</html>
